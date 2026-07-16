@@ -82,6 +82,10 @@ class UniversalDownloader:
             if cfg.get("speed_limit", 0) > 0:
                 opts['ratelimit'] = cfg["speed_limit"] * 1024
 
+            cookie_path = os.path.join(os.getcwd(), 'cookies.txt')
+            if os.path.exists(cookie_path):
+                opts['cookiefile'] = cookie_path
+
             if cfg.get("download_subtitle", False) and not is_audio:
                 opts['writesubtitles'] = True
                 opts['subtitleslangs'] = ['id', 'en', 'all']

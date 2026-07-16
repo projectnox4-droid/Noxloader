@@ -68,8 +68,26 @@ export default function App() {
             </ul>
           </div>
 
-          <div className="flex items-start gap-3 bg-[#002222] p-4 border border-[#00FFFF]">
+          <div className="flex items-start gap-3 bg-[#001111] p-4 border border-[#004444] mb-6">
             <ShieldAlert className="w-5 h-5 text-[#00FFFF] shrink-0 mt-0.5" />
+            <div className="text-sm text-[#00FFFF]">
+              <strong className="block text-[#00FFFF] mb-1 uppercase font-bold">🔐 Cara Tembus Video Private (IG/YT/FB/Tiktok)</strong>
+              <div className="space-y-2 mt-2 opacity-90 text-xs">
+                <p>NoxLoader udah pake auto-detect <code>cookies.txt</code>. Gini cara dapet tiket masuknya:</p>
+                <ol className="list-decimal ml-4 space-y-1">
+                  <li>Pake <strong>Kiwi Browser</strong> (di Android) atau Chrome (di PC).</li>
+                  <li>Install Ekstensi <strong>"Get cookies.txt LOCALLY"</strong>.</li>
+                  <li>Login ke web target (Misal: instagram.com / youtube.com) pake akun tumbal lu.</li>
+                  <li>Pencet ekstensi tadi, trus klik tombol <strong>Export</strong>.</li>
+                  <li>Bakal ada file kerudung namanya <code>cookies.txt</code>. Pindahin file itu ke dalem folder <strong className="text-white">noxloader</strong> barengan sama <code>main.py</code>.</li>
+                  <li>Jalanin NoxLoader kayak biasa. Gwe bakal otomatis pake akun lu buat nembus gemboknya cok! 😈</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3 bg-[#002222] p-4 border border-[#00FFFF]">
+            <Terminal className="w-5 h-5 text-[#00FFFF] shrink-0 mt-0.5" />
             <div className="text-sm text-[#00FFFF]">
               <strong className="block text-[#00FFFF] mb-1 uppercase font-bold">Cara Pake di Termux HP Lu:</strong>
               <div className="space-y-1 mt-2 opacity-90">
