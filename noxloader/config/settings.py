@@ -1,6 +1,6 @@
 import json
 import os
-from ui.theme import CYAN, RESET, clear
+from ui.theme import current_color, RESET, clear, print_status, LIGHT_GRAY
 from ui.banner import show_banner
 
 def get_settings_file():
@@ -39,7 +39,8 @@ def show_settings():
         cfg = load_settings()
         clear()
         show_banner()
-        print(f"{CYAN}  ⚙ PENGATURAN TONGKRONGAN{RESET}\n")
+        c = current_color()
+        print_status("INFO", "PENGATURAN TONGKRONGAN")
         
         anim_str = "Aktif" if cfg["animation"] else "Mati"
         sub_str = "Aktif" if cfg["download_subtitle"] else "Mati"
@@ -48,17 +49,19 @@ def show_settings():
         aria_str = "Aktif" if cfg.get("aria2_booster", False) else "Mati"
         spd = cfg["speed_limit"]
         spd_str = f"{spd} KB/s" if spd > 0 else "Ngebut (No Limit)"
-
-        print(f"{CYAN}  [1] 🏃 Speed Limit       : {spd_str}{RESET}")
-        print(f"{CYAN}  [2] 📝 Download Subtitle : {sub_str}{RESET}")
-        print(f"{CYAN}  [3] 🖼️ Download Sampul   : {thumb_str}{RESET}")
-        print(f"{CYAN}  [4] 🏷️ Auto Metadata     : {meta_str}{RESET}")
-        print(f"{CYAN}  [5] ✨ Animasi           : {anim_str}{RESET}")
-        print(f"{CYAN}  [6] 🚀 Aria2 Booster     : {aria_str}{RESET}")
-        print(f"{CYAN}  [0] 🔙 Kembali{RESET}\n")
+        
+        print(f"{c}  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓{RESET}")
+        print(f"{c}  ┃ [1] 🏃 {LIGHT_GRAY}Speed Limit       : {spd_str.ljust(11)}{c} ┃{RESET}")
+        print(f"{c}  ┃ [2] 📝 {LIGHT_GRAY}Download Subtitle : {sub_str.ljust(11)}{c} ┃{RESET}")
+        print(f"{c}  ┃ [3] 🖼️  {LIGHT_GRAY}Download Sampul   : {thumb_str.ljust(11)}{c} ┃{RESET}")
+        print(f"{c}  ┃ [4] 🏷️  {LIGHT_GRAY}Auto Metadata     : {meta_str.ljust(11)}{c} ┃{RESET}")
+        print(f"{c}  ┃ [5] ✨ {LIGHT_GRAY}Animasi           : {anim_str.ljust(11)}{c} ┃{RESET}")
+        print(f"{c}  ┃ [6] 🚀 {LIGHT_GRAY}Aria2 Booster     : {aria_str.ljust(11)}{c} ┃{RESET}")
+        print(f"{c}  ┃ {c}[0] 🔙 Kembali{' '*22}{c} ┃{RESET}")
+        print(f"{c}  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{RESET}\n")
         
         try:
-            pilih = input(f"{CYAN}  😈 Pilih yg mau diubah cok: {RESET}").strip()
+            pilih = input(f"{c}  😈 Pilih yg mau diubah cok: {RESET}").strip()
         except:
             break
             
@@ -66,7 +69,7 @@ def show_settings():
             break
         elif pilih == '1':
             try:
-                limit = input(f"{CYAN}  Masukkan limit (KB/s, 0 = No Limit): {RESET}")
+                limit = input(f"{c}  Masukkan limit (KB/s, 0 = No Limit): {RESET}")
                 cfg["speed_limit"] = int(limit)
                 save_settings(cfg)
             except: pass
@@ -85,3 +88,4 @@ def show_settings():
         elif pilih == '6':
             cfg["aria2_booster"] = not cfg.get("aria2_booster", False)
             save_settings(cfg)
+

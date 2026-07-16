@@ -1,14 +1,15 @@
 import os
-from ui.theme import CYAN, RESET, clear
+from ui.theme import current_color, RESET, clear, print_status, LIGHT_GRAY
 from ui.animations import spinner
 from ui.banner import show_banner
 
 def recon_url():
     clear()
     show_banner()
-    print(f"{CYAN}  🕵️ INTEL RECON (Cek Metadata Tanpa Download){RESET}\n")
+    c = current_color()
+    print_status("INFO", "INTEL RECON (Cek Metadata Tanpa Download)")
     try:
-        url = input(f"{CYAN}  🤪 Tempel linknya sini cok: {RESET}").strip()
+        url = input(f"{c}  🤪 Tempel linknya sini cok: {RESET}").strip()
     except EOFError:
         return
         
@@ -19,7 +20,8 @@ def recon_url():
     try:
         import yt_dlp
     except ImportError:
-        print(f"  {CYAN}💀 Waduh cok, lu belum install bahan.{RESET}")
+        print_status("ERROR", "Waduh cok, lu belum install bahan.")
+        input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
         return
         
     opts = {
@@ -33,21 +35,24 @@ def recon_url():
         with yt_dlp.YoutubeDL(opts) as ydl:
             info = ydl.extract_info(url, download=False)
             if not info:
-                print(f"  {CYAN}💀 Gagal ngambil intel cok.{RESET}")
+                print_status("ERROR", "Gagal ngambil intel cok.")
+                input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
                 return
                 
-            print(f"\n{CYAN}  === [ 🕵️ DATA INTEL ] ==={RESET}")
-            print(f"{CYAN}  📌 Judul      : {info.get('title', 'Unknown')}{RESET}")
-            print(f"{CYAN}  👤 Uploader   : {info.get('uploader', 'Unknown')}{RESET}")
-            print(f"{CYAN}  📺 Platform   : {info.get('extractor_key', 'Unknown')}{RESET}")
-            print(f"{CYAN}  ⏱️ Durasi     : {info.get('duration_string', 'Unknown')}{RESET}")
-            print(f"{CYAN}  👁️ Views      : {info.get('view_count', 'Unknown')}{RESET}")
-            print(f"{CYAN}  👍 Likes      : {info.get('like_count', 'Unknown')}{RESET}")
-            desc = str(info.get('description', ''))[:100]
-            if len(str(info.get('description', ''))) > 100: desc += "..."
-            print(f"{CYAN}  📝 Deskripsi  : {desc}{RESET}")
-            print(f"{CYAN}  ========================={RESET}\n")
+            print(f"\n{c}  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓{RESET}")
+            print(f"{c}  ┃ 🕵️ DATA INTEL{' '*23}┃{RESET}")
+            print(f"{c}  ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫{RESET}")
+            print(f"{c}  ┃ {LIGHT_GRAY}📌 Judul      : {info.get('title', 'Unknown')[:20].ljust(20)}{c} ┃{RESET}")
+            print(f"{c}  ┃ {LIGHT_GRAY}👤 Uploader   : {info.get('uploader', 'Unknown')[:20].ljust(20)}{c} ┃{RESET}")
+            print(f"{c}  ┃ {LIGHT_GRAY}📺 Platform   : {info.get('extractor_key', 'Unknown')[:20].ljust(20)}{c} ┃{RESET}")
+            print(f"{c}  ┃ {LIGHT_GRAY}⏱️ Durasi     : {str(info.get('duration_string', 'Unknown'))[:20].ljust(20)}{c} ┃{RESET}")
+            print(f"{c}  ┃ {LIGHT_GRAY}👁️ Views      : {str(info.get('view_count', 'Unknown'))[:20].ljust(20)}{c} ┃{RESET}")
+            print(f"{c}  ┃ {LIGHT_GRAY}👍 Likes      : {str(info.get('like_count', 'Unknown'))[:20].ljust(20)}{c} ┃{RESET}")
+            desc = str(info.get('description', ''))[:17]
+            if len(str(info.get('description', ''))) > 17: desc += "..."
+            print(f"{c}  ┃ {LIGHT_GRAY}📝 Deskripsi  : {desc.ljust(20)}{c} ┃{RESET}")
+            print(f"{c}  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{RESET}\n")
     except Exception as e:
-        print(f"  {CYAN}💀 Gagal nembus cok. Linknya private atau error.{RESET}")
+        print_status("ERROR", "Gagal nembus cok. Linknya private atau error.")
         
-    input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
+    input(f"\n{c}  [Enter] Balik ke menu...{RESET}")

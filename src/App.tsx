@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Terminal, Download, Code2, ShieldAlert } from "lucide-react";
+import { Terminal, Download, Code2, ShieldAlert , Zap } from "lucide-react";
 
 export default function App() {
   return (

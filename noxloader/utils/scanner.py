@@ -1,33 +1,30 @@
-def scan_url(url):
-    url_lower = url.lower()
-    platform = "Universal"
-    domain = "Unknown"
+import time
+from ui.theme import current_color, RESET, print_status
+from ui.animations import spinner, progress_bar, typing_effect
 
-    if "youtube.com" in url_lower or "youtu.be" in url_lower:
-        platform = "YouTube"
-        domain = "youtube.com"
-    elif "tiktok.com" in url_lower:
-        platform = "TikTok"
-        domain = "tiktok.com"
-    elif "instagram.com" in url_lower:
-        platform = "Instagram"
-        domain = "instagram.com"
-    elif "facebook.com" in url_lower or "fb.watch" in url_lower or "fb.gg" in url_lower:
-        platform = "Facebook"
-        domain = "facebook.com"
-    elif "twitter.com" in url_lower or "x.com" in url_lower:
-        platform = "X"
-        domain = "x.com"
-    elif "vimeo.com" in url_lower:
-        platform = "Vimeo"
-        domain = "vimeo.com"
-    else:
-        try:
-            domain = url.split("//")[-1].split("/")[0]
-        except:
-            domain = "Unknown"
-
-    return {
-        "domain": domain,
-        "platform": platform
-    }
+def scan_url():
+    c = current_color()
+    print()
+    print_status("INFO", "Ngendus link...")
+    for i in range(1, 11):
+        progress_bar(i, 10, prefix='Ngendus link... ', suffix='', length=20)
+        time.sleep(0.05)
+    
+    print_status("INFO", "Domain...")
+    for i in range(1, 11):
+        progress_bar(i, 10, prefix='Domain...       ', suffix='', length=20)
+        time.sleep(0.05)
+        
+    print_status("INFO", "Platform...")
+    for i in range(1, 11):
+        progress_bar(i, 10, prefix='Platform...     ', suffix='', length=20)
+        time.sleep(0.05)
+        
+    print_status("INFO", "Metadata...")
+    for i in range(1, 11):
+        progress_bar(i, 10, prefix='Metadata...     ', suffix='', length=20)
+        time.sleep(0.05)
+        
+    print()
+    typing_effect("✅ Target dikunci, siap eksekusi...", 0.02)
+    print()
