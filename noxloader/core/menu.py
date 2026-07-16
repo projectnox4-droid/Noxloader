@@ -108,12 +108,13 @@ def main_menu():
         print(f"{CYAN}  [5] ❌ NOXX")
         print(f"{CYAN}  [6] 🎬 NOXVID")
         print(f"{CYAN}  [7] 🌐 Universal")
+        print(f"{CYAN}  [8] 🔐 Akses Private (Auto Cookie)")
         print(f"{CYAN}  ────────────────────────")
-        print(f"{CYAN}  [8] 📦 Install Bahan")
-        print(f"{CYAN}  [9] 🔍 Cek Bahan")
-        print(f"{CYAN}  [10] 📜 Riwayat")
-        print(f"{CYAN}  [11] 🧹 Bersihkan Cache")
-        print(f"{CYAN}  [12] ⚙ Pengaturan")
+        print(f"{CYAN}  [9] 📦 Install Bahan")
+        print(f"{CYAN}  [10] 🔍 Cek Bahan")
+        print(f"{CYAN}  [11] 📜 Riwayat")
+        print(f"{CYAN}  [12] 🧹 Bersihkan Cache")
+        print(f"{CYAN}  [13] ⚙ Pengaturan")
         print(f"{CYAN}  [0] 🚪 Keluar{RESET}")
         print()
         
@@ -156,24 +157,58 @@ def main_menu():
         elif pilih == '8':
             clear()
             show_banner()
-            install_deps()
-            input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
+            try:
+                from utils.clipboard import save_cookie_from_clipboard
+            except Exception:
+                save_cookie_from_clipboard = lambda: False
+                
+            print(f"{CYAN}  🔐 SETUP AUTO COOKIE & PRIVATE DOWNLOAD{RESET}\n")
+            spinner("Ngecek clipboard keyboard lu...", 2)
+            
+            if save_cookie_from_clipboard():
+                print(f"  {CYAN}✔ Weh, nemu format Cookie di keyboard lu! Udah gwe tempel otomatis. 😈{RESET}")
+                time.sleep(1)
+                
+                urls = get_urls_input()
+                if urls:
+                    clear()
+                    show_banner()
+                    print(f"{CYAN}  🔍 Bentar cok, gwe terawang dulu link private lu...{RESET}")
+                    spinner("Menganalisis link...", 2)
+                    dl = UniversalDownloader(base_dir)
+                    dl.download(urls, "Universal", format_type='best')
+                    input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
+            else:
+                print(f"  {CYAN}💀 Clipboard lu kosong atau bukan format cookie.{RESET}\n")
+                print(f"  {CYAN}Syarat Auto Cookie (Biar Gwe Bisa Nembus):{RESET}")
+                print(f"  {CYAN}1. Buka browser, pake ekstensi 'Get cookies.txt LOCALLY'.{RESET}")
+                print(f"  {CYAN}2. Copy semua teks/isi cookie nya.{RESET}")
+                print(f"  {CYAN}3. Pastikan lu udah install aplikasi 'Termux:API' di HP lu.{RESET}")
+                print(f"  {CYAN}   (Atau jalanin Menu 9 - Install Bahan).{RESET}")
+                print(f"  {CYAN}4. Balik ke NoxLoader, pencet Menu 8 lagi. Otomatis ketempel!{RESET}")
+                input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
+                
         elif pilih == '9':
             clear()
             show_banner()
-            check_deps()
+            install_deps()
             input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
         elif pilih == '10':
             clear()
             show_banner()
-            show_history()
+            check_deps()
             input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
         elif pilih == '11':
             clear()
             show_banner()
-            clean_cache()
+            show_history()
             input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
         elif pilih == '12':
+            clear()
+            show_banner()
+            clean_cache()
+            input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
+        elif pilih == '13':
             show_settings()
         else:
             spinner("Menu apaan tuh...", 1)

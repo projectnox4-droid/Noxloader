@@ -71,16 +71,15 @@ export default function App() {
           <div className="flex items-start gap-3 bg-[#001111] p-4 border border-[#004444] mb-6">
             <ShieldAlert className="w-5 h-5 text-[#00FFFF] shrink-0 mt-0.5" />
             <div className="text-sm text-[#00FFFF]">
-              <strong className="block text-[#00FFFF] mb-1 uppercase font-bold">🔐 Cara Tembus Video Private (IG/YT/FB/Tiktok)</strong>
+              <strong className="block text-[#00FFFF] mb-1 uppercase font-bold">🔐 Fitur Baru: Auto Cookie Bypass (Anti Ribet)</strong>
               <div className="space-y-2 mt-2 opacity-90 text-xs">
-                <p>NoxLoader udah pake auto-detect <code>cookies.txt</code>. Gini cara dapet tiket masuknya:</p>
+                <p>Udah gwe buatin <strong>Menu [8] Akses Private</strong> yang otomatis ngambil cookie dari keyboard/clipboard lu (Termux API). Gini cara pakenya:</p>
                 <ol className="list-decimal ml-4 space-y-1">
-                  <li>Pake <strong>Kiwi Browser</strong> (di Android) atau Chrome (di PC).</li>
-                  <li>Install Ekstensi <strong>"Get cookies.txt LOCALLY"</strong>.</li>
-                  <li>Login ke web target (Misal: instagram.com / youtube.com) pake akun tumbal lu.</li>
-                  <li>Pencet ekstensi tadi, trus klik tombol <strong>Export</strong>.</li>
-                  <li>Bakal ada file kerudung namanya <code>cookies.txt</code>. Pindahin file itu ke dalem folder <strong className="text-white">noxloader</strong> barengan sama <code>main.py</code>.</li>
-                  <li>Jalanin NoxLoader kayak biasa. Gwe bakal otomatis pake akun lu buat nembus gemboknya cok! 😈</li>
+                  <li>Install ekstensi <strong>Get cookies.txt LOCALLY</strong> di Kiwi Browser / Yandex / Chrome PC.</li>
+                  <li>Login ke IG/YT/FB pake akun lu, terus <strong>Copy semua isi cookie</strong> pake ekstensi tadi.</li>
+                  <li>Masuk ke NoxLoader, pilih <strong>Menu 8</strong>.</li>
+                  <li>Gwe bakal otomatis baca keyboard lu, nyimpen cookie nya, dan langsung minta link video private nya.</li>
+                  <li><em>Catatan:</em> Lu wajib install aplikasi <strong>Termux:API</strong> dari PlayStore/F-Droid biar gwe bisa baca keyboard lu!</li>
                 </ol>
               </div>
             </div>

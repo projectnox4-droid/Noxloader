@@ -8,7 +8,7 @@ def install_deps():
     spinner("Installing dependencies (Termux/Linux)...", 4)
     try:
         # Wrap everything silently
-        subprocess.run(["pkg", "install", "python", "ffmpeg", "curl", "jq", "-y"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(["pkg", "install", "python", "ffmpeg", "curl", "jq", "termux-api", "-y"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         subprocess.run([sys.executable, "-m", "pip", "install", "yt-dlp", "colorama", "rich"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         print(f"{CYAN}  🤙 Mantap cok, semua bahan udah siap!{RESET}")
     except Exception:
