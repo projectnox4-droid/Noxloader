@@ -38,17 +38,17 @@ export default function App() {
           
           <div className="flex items-center gap-3 mb-4 mt-2">
             <Terminal className="w-5 h-5 text-[#00FFFF]" />
-            <h2 className="text-lg font-bold text-[#00FFFF]">6 Fitur Dewa Activated 🔥</h2>
+            <h2 className="text-lg font-bold text-[#00FFFF]">OP Features Activated 🚀🔥</h2>
           </div>
           <p className="text-[#00FFFF] text-sm leading-relaxed mb-6 opacity-90">
-            Sesuai request lu cok, ini 6 fitur ngeri udah gwe tanem langsung ke daleman <strong className="text-white">NOXLOADER</strong>:
+            Sesuai request lu cok, ini fitur-fitur ngeri (termasuk 3 fitur OP baru) udah gwe tanem langsung ke daleman <strong className="text-white">NOXLOADER</strong>:
             <br/><br/>
-            <strong>1. Auto-Resume & Retry</strong> (Tahan banting kalau inet putus)<br/>
-            <strong>2. Speed Limit</strong> (Biar nggak nyedot kuota, setel di Pengaturan)<br/>
-            <strong>3. Subtitle Grabber</strong> (Auto comot takarir ID/EN)<br/>
-            <strong>4. Thumbnail Grabber</strong> (Download cover sampulnya juga)<br/>
-            <strong>5. Auto Metadata Injector</strong> (Tagging artis/judul rapih)<br/>
-            <strong>6. Custom Quality</strong> (Bisa pilih 1080p, 720p, 480p pas mau download video)
+            <strong>1. Aria2c Multi-Threading</strong> (Nge-boost speed download 300% lebih gila, idupin di Setting)<br/>
+            <strong>2. Intel Recon</strong> (Ngintip intel metadata asli dari link video tanpa perlu didownload)<br/>
+            <strong>3. Auto-Update Engine</strong> (Update modul backend dengan 1 tombol, anti-basi)<br/>
+            <strong>4. Auto-Resume & Speed Limit</strong> (Tahan banting kalau inet putus / set limit speed)<br/>
+            <strong>5. Subtitle & Thumbnail Grabber</strong> (Auto comot takarir ID/EN & cover art)<br/>
+            <strong>6. Custom Quality & Auto Metadata</strong> (Pilih resolusi, auto injek tagging MP3/MP4)
           </p>
 
           <div className="bg-[#001111] p-4 border border-[#004444] font-mono text-xs text-[#00FFFF] mb-6">
@@ -81,6 +81,25 @@ export default function App() {
                   <li>Gwe bakal otomatis baca keyboard lu, nyimpen cookie nya, dan langsung minta link video private nya.</li>
                   <li><em>Catatan:</em> Lu wajib install aplikasi <strong>Termux:API</strong> dari PlayStore/F-Droid biar gwe bisa baca keyboard lu!</li>
                 </ol>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3 bg-[#110022] p-4 border border-[#8800ff] mb-6">
+            <Zap className="w-5 h-5 text-[#cc00ff] shrink-0 mt-0.5" />
+            <div className="text-sm text-[#eebbff]">
+              <strong className="block text-[#cc00ff] mb-1 uppercase font-bold">🔮 UPDATE TERBARU: 6 Fitur OP Ngeri Udah Rilis! 😈</strong>
+              <div className="space-y-2 mt-2 opacity-90 text-xs">
+                <p>NoxLoader sekarang makin gg gaming cok, 6 fitur super OP udah aktif di menu:</p>
+                <ul className="list-disc ml-4 space-y-1">
+                  <li><strong>[10] 🔴 NOXSTREAM:</strong> Auto-record live streaming tanpa henti.</li>
+                  <li><strong>[11] 🦇 Ngalong Mode:</strong> Auto-download jam 2 pagi pas kuota malam idup.</li>
+                  <li><strong>[12] 👻 Ghost Mode:</strong> Nyamar pake Proxy/Tor rotator anti banned IP.</li>
+                  <li><strong>[13] 🎧 NOXAUDIO:</strong> Sedot Spotify, Soundcloud, & Apple Music format FLAC/320kbps.</li>
+                  <li><strong>[14] ✂️ Auto-Cutter:</strong> Potong & trim video langsung dari terminal pake FFmpeg.</li>
+                  <li><strong>[15] 🔞 Premium Scraper:</strong> Sedot se-folder OnlyFans/Drive (Wajib auto-cookie Menu 8).</li>
+                </ul>
+                <p className="mt-2 font-bold text-white">Semua udah gwe tanem. Gaskeun download gila-gilaan cok! 🚀</p>
               </div>
             </div>
           </div>

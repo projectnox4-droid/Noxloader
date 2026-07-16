@@ -8,7 +8,7 @@ BOLD = '\033[1m'
 
 def clear():
     """Clear screen cross-platform, kept silent."""
-    os.system('clear || cls')
+    os.system('clear 2>/dev/null') if os.name == 'posix' else os.system('cls 2>nul')
 
 def print_neon(text):
     print(f"{CYAN}{BOLD}{text}{RESET}")

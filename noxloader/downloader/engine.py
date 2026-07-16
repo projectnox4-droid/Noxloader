@@ -82,6 +82,13 @@ class UniversalDownloader:
             if cfg.get("speed_limit", 0) > 0:
                 opts['ratelimit'] = cfg["speed_limit"] * 1024
 
+            if cfg.get("aria2_booster", False):
+                opts['external_downloader'] = 'aria2c'
+                opts['external_downloader_args'] = ['-c', '-j', '4', '-x', '4', '-s', '4', '-k', '1M']
+
+            if cfg.get("ghost_mode", False):
+                opts['proxy'] = 'socks5://127.0.0.1:9050'
+
             cookie_path = os.path.join(os.getcwd(), 'cookies.txt')
             if os.path.exists(cookie_path):
                 opts['cookiefile'] = cookie_path

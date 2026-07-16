@@ -19,7 +19,8 @@ def load_settings():
         "speed_limit": 0,
         "download_subtitle": False,
         "download_thumbnail": False,
-        "auto_metadata": True
+        "auto_metadata": True,
+        "aria2_booster": False
     }
     if os.path.exists(sf):
         try:
@@ -44,6 +45,7 @@ def show_settings():
         sub_str = "Aktif" if cfg["download_subtitle"] else "Mati"
         thumb_str = "Aktif" if cfg["download_thumbnail"] else "Mati"
         meta_str = "Aktif" if cfg["auto_metadata"] else "Mati"
+        aria_str = "Aktif" if cfg.get("aria2_booster", False) else "Mati"
         spd = cfg["speed_limit"]
         spd_str = f"{spd} KB/s" if spd > 0 else "Ngebut (No Limit)"
 
@@ -52,6 +54,7 @@ def show_settings():
         print(f"{CYAN}  [3] 🖼️ Download Sampul   : {thumb_str}{RESET}")
         print(f"{CYAN}  [4] 🏷️ Auto Metadata     : {meta_str}{RESET}")
         print(f"{CYAN}  [5] ✨ Animasi           : {anim_str}{RESET}")
+        print(f"{CYAN}  [6] 🚀 Aria2 Booster     : {aria_str}{RESET}")
         print(f"{CYAN}  [0] 🔙 Kembali{RESET}\n")
         
         try:
@@ -78,4 +81,7 @@ def show_settings():
             save_settings(cfg)
         elif pilih == '5':
             cfg["animation"] = not cfg["animation"]
+            save_settings(cfg)
+        elif pilih == '6':
+            cfg["aria2_booster"] = not cfg.get("aria2_booster", False)
             save_settings(cfg)

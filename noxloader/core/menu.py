@@ -3,9 +3,10 @@ import time
 from ui.theme import clear, print_neon, CYAN, RESET
 from ui.banner import show_banner
 from ui.animations import spinner
-from utils.installer import install_deps, check_deps
+from utils.installer import install_deps, check_deps, update_engine
 from utils.scanner import scan_url
 from utils.cleaner import clean_cache
+from utils.recon import recon_url
 from history.manager import show_history
 from config.settings import show_settings
 from downloader.engine import UniversalDownloader
@@ -43,6 +44,8 @@ def get_urls_input():
         except KeyboardInterrupt:
             break
     return urls
+
+from core.extra_menus import noxstream_menu, ngalong_mode, ghost_mode, noxaudio_menu, auto_cutter, scraper_menu
 
 def submenu(title, options, platform):
     base_dir = init_dirs()
@@ -101,6 +104,9 @@ def main_menu():
     while True:
         clear()
         show_banner()
+        print(f"{CYAN}  ========================================")
+        print(f"{CYAN}           🔥 CORE FEATURES 🔥            ")
+        print(f"{CYAN}  ========================================")
         print(f"{CYAN}  [1] 📺 NOXYOU")
         print(f"{CYAN}  [2] 🎵 NOXTOK")
         print(f"{CYAN}  [3] 📷 NOXGRAM")
@@ -109,17 +115,30 @@ def main_menu():
         print(f"{CYAN}  [6] 🎬 NOXVID")
         print(f"{CYAN}  [7] 🌐 Universal")
         print(f"{CYAN}  [8] 🔐 Akses Private (Auto Cookie)")
-        print(f"{CYAN}  ────────────────────────")
-        print(f"{CYAN}  [9] 📦 Install Bahan")
-        print(f"{CYAN}  [10] 🔍 Cek Bahan")
-        print(f"{CYAN}  [11] 📜 Riwayat")
-        print(f"{CYAN}  [12] 🧹 Bersihkan Cache")
-        print(f"{CYAN}  [13] ⚙ Pengaturan")
+        print(f"{CYAN}  [9] 🕵️ Intel Recon (Cek Info Meta)")
+        print(f"{CYAN}  ========================================")
+        print(f"{CYAN}            😈 OP FEATURES 😈             ")
+        print(f"{CYAN}  ========================================")
+        print(f"{CYAN}  [10] 🔴 NOXSTREAM (Live Recorder)")
+        print(f"{CYAN}  [11] 🦇 Ngalong Mode (Jadwal Malam)")
+        print(f"{CYAN}  [12] 👻 Ghost Mode (Tor/Proxy Rotator)")
+        print(f"{CYAN}  [13] 🎧 NOXAUDIO (Spotify/Soundcloud)")
+        print(f"{CYAN}  [14] ✂️ Auto-Cutter Maker")
+        print(f"{CYAN}  [15] 🔞 Premium Scraper (Drive/OF)")
+        print(f"{CYAN}  ========================================")
+        print(f"{CYAN}           ⚙️ SYSTEM TOOLS ⚙️             ")
+        print(f"{CYAN}  ========================================")
+        print(f"{CYAN}  [16] 📦 Install Bahan")
+        print(f"{CYAN}  [17] 🔍 Cek Bahan")
+        print(f"{CYAN}  [18] 🔄 Update Engine (yt-dlp)")
+        print(f"{CYAN}  [19] 📜 Riwayat")
+        print(f"{CYAN}  [20] 🧹 Bersihkan Cache")
+        print(f"{CYAN}  [21] ⚙ Pengaturan")
         print(f"{CYAN}  [0] 🚪 Keluar{RESET}")
         print()
         
         try:
-            pilih = input(f"{CYAN}  😈 Pilih menu cok: {RESET}").strip()
+            pilih = input(f"{CYAN}  💀 Pilih menu cok: {RESET}").strip()
         except EOFError:
             continue
 
@@ -189,26 +208,45 @@ def main_menu():
                 input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
                 
         elif pilih == '9':
+            recon_url()
+        elif pilih == '10':
+            noxstream_menu()
+        elif pilih == '11':
+            ngalong_mode()
+        elif pilih == '12':
+            ghost_mode()
+        elif pilih == '13':
+            noxaudio_menu()
+        elif pilih == '14':
+            auto_cutter()
+        elif pilih == '15':
+            scraper_menu()
+        elif pilih == '16':
             clear()
             show_banner()
             install_deps()
             input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '10':
+        elif pilih == '17':
             clear()
             show_banner()
             check_deps()
             input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '11':
+        elif pilih == '18':
+            clear()
+            show_banner()
+            update_engine()
+            input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
+        elif pilih == '19':
             clear()
             show_banner()
             show_history()
             input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '12':
+        elif pilih == '20':
             clear()
             show_banner()
             clean_cache()
             input(f"\n{CYAN}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '13':
+        elif pilih == '21':
             show_settings()
         else:
             spinner("Menu apaan tuh...", 1)
