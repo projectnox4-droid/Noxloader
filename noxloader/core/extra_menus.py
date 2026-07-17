@@ -153,3 +153,35 @@ def scraper_menu():
         print_footer()
         input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
 
+def stalker_mode():
+    clear()
+    show_banner()
+    c = current_color()
+    print_status("INFO", "STALKER MODE (Profile Monitor 24/7)")
+    print(f"{LIGHT_GRAY}  Gwe bakal pantau akun target secara background di Termux.{RESET}")
+    print(f"{LIGHT_GRAY}  Kalo dia post Story/Reels baru, otomatis gwe sedot cok.{RESET}")
+    
+    target = input(f"\n{c}  😈 Masukin username IG/TikTok (tanpa @): {RESET}").strip()
+    if not target:
+        return
+        
+    print(f"\n{c}  [1] Aktifin Bypass Akun Private (Butuh Auto-Cookie Menu 8){RESET}")
+    print(f"{c}  [2] Target Akun Publik Biasa{RESET}")
+    is_private = input(f"{c}  Pilih tipe target: {RESET}").strip()
+    
+    if is_private == '1':
+        print_status("WARNING", "Fitur Private Bypass aktif! Risiko akun ig tumbal ke-ban lebih tinggi.")
+        time.sleep(2)
+        
+    print_status("SUCCESS", f"Sip cok! Mulai mantau @{target} 24/7...")
+    print(f"{LIGHT_GRAY}  (Ini simulasi UI: Aslinya butuh daemon service buat jalan di background Termux.){RESET}")
+    print(f"{LIGHT_GRAY}  Tekan CTRL+C buat berentiin stalker.{RESET}")
+    
+    try:
+        while True:
+            spinner(f"Lagi ngintai @{target} ...", 5)
+            # Simulated check
+    except KeyboardInterrupt:
+        print_status("WARNING", f"Berhenti ngintai @{target}.")
+        
+    input(f"\n{c}  [Enter] Balik ke menu...{RESET}")

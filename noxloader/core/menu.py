@@ -143,7 +143,8 @@ def main_menu():
         print(f"{c}  ┃ [18] 🔄 {LIGHT_GRAY}Update Engine{c}                 ┃{RESET}")
         print(f"{c}  ┃ [19] 📜 {LIGHT_GRAY}Riwayat{c}                       ┃{RESET}")
         print(f"{c}  ┃ [20] 🧹 {LIGHT_GRAY}Bersihkan Cache{c}               ┃{RESET}")
-        print(f"{c}  ┃ [21] ⚙  {LIGHT_GRAY}Pengaturan{c}                    ┃{RESET}")
+        print(f"{c}  ┃ [21] 🕵️ {LIGHT_GRAY}Stalker Mode{c}                  ┃{RESET}")
+        print(f"{c}  ┃ [22] ⚙  {LIGHT_GRAY}Pengaturan{c}                    ┃{RESET}")
         print(f"{c}  ┃ {rgb(100,100,100)}[0]  🚪 Keluar{' '*22}{c} ┃{RESET}")
         print(f"{c}  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{RESET}")
         print()
@@ -267,6 +268,10 @@ def main_menu():
             clean_cache()
             input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
         elif pilih == '21':
+            ThemeManager.current_menu = "CORE"
+            from core.extra_menus import stalker_mode
+            stalker_mode()
+        elif pilih == '22':
             ThemeManager.current_menu = "CORE"
             show_settings()
         else:
