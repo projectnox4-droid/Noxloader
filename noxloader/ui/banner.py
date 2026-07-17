@@ -14,8 +14,7 @@ def show_banner():
 ║ ██║ ╚████║╚██████╔╝██╔╝ ██╗   ██║    ║
 ║ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ║
 ╚══════════════════════════════════════╝
-        {LIGHT_GRAY}YouTube Downloader{RESET}
-"""
+        {LIGHT_GRAY}YouTube Downloader{RESET}"""
     elif menu == "NOXTOK":
         banner = f"""{c}{BOLD}
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -26,8 +25,7 @@ def show_banner():
 ┃ ██║ ╚████║╚██████╔╝██╔╝ ██╗   ██║    ┃
 ┃ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-        {LIGHT_GRAY}TikTok Downloader{RESET}
-"""
+        {LIGHT_GRAY}TikTok Downloader{RESET}"""
     elif menu == "NOXGRAM":
         banner = f"""{c}{BOLD}
 ╔══════════════════════════════════════╗
@@ -38,8 +36,7 @@ def show_banner():
 ║ ██║ ╚████║╚██████╔╝██╔╝ ██╗╚██████╔╝ ║
 ║ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝  ║
 ╚══════════════════════════════════════╝
-        {LIGHT_GRAY}Instagram Downloader{RESET}
-"""
+        {LIGHT_GRAY}Instagram Downloader{RESET}"""
     elif menu == "NOXBOOK":
         banner = f"""{c}{BOLD}
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -50,8 +47,7 @@ def show_banner():
 ┃ ██║ ╚████║╚██████╔╝██╔╝ ██╗██████╔╝  ┃
 ┃ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝   ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-        {LIGHT_GRAY}Facebook Downloader{RESET}
-"""
+        {LIGHT_GRAY}Facebook Downloader{RESET}"""
     elif menu == "NOXX":
         banner = f"""{c}{BOLD}
 ╔══════════════════════════════════════╗
@@ -62,8 +58,7 @@ def show_banner():
 ║ ██║ ╚████║╚██████╔╝██╔╝ ██╗██╔╝ ██╗  ║
 ║ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝  ║
 ╚══════════════════════════════════════╝
-        {LIGHT_GRAY}X (Twitter) Downloader{RESET}
-"""
+        {LIGHT_GRAY}X (Twitter) Downloader{RESET}"""
     elif menu == "NOXVID":
         banner = f"""{c}{BOLD}
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -74,8 +69,7 @@ def show_banner():
 ┃ ██║ ╚████║╚██████╔╝██╔╝ ██╗ ╚████╔╝  ┃
 ┃ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝  ╚═══╝   ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-        {LIGHT_GRAY}Vimeo Downloader{RESET}
-"""
+        {LIGHT_GRAY}Vimeo Downloader{RESET}"""
     elif menu == "UNIVERSAL":
         banner = f"""{c}{BOLD}
 ╔══════════════════════════════════════╗
@@ -86,21 +80,18 @@ def show_banner():
 ║ ██║ ╚████║╚██████╔╝██╔╝ ██╗╚██████╔╝ ║
 ║ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝  ║
 ╚══════════════════════════════════════╝
-        {LIGHT_GRAY}Universal Hub{RESET}
-"""
+        {LIGHT_GRAY}Universal Hub{RESET}"""
     else:
         # Default CORE Banner
         banner = f"""{c}{BOLD}
-███╗   ██╗ ██████╗ ██╗  ██╗████╗  ██║
- ██╔════╝██╔═══██╗██╔══██╗██╔════╝
- ██║     ██║   ██║██████╔╝█████╗  
- ██║     ██║   ██║██╔══██╗██╔══╝  
- ╚██████╗╚██████╔╝██║  ██║███████╗
-  ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
-        
-{c}NOXLOADER
-{LIGHT_GRAY}Premium CLI Universal Downloader{RESET}
-"""
+███╗   ██╗ ██████╗ ██╗  ██╗
+████╗  ██║██╔═══██╗╚██╗██╔╝
+██╔██╗ ██║██║   ██║ ╚███╔╝ 
+██║╚██╗██║██║   ██║ ██╔██╗ 
+██║ ╚████║╚██████╔╝██╔╝ ██╗
+╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝
+        {c}NOXLOADER
+{LIGHT_GRAY}Premium CLI Universal Downloader{RESET}"""
     print(banner)
 
 def print_footer():
@@ -108,4 +99,3 @@ def print_footer():
     menu = ThemeManager.current_menu
     if menu != "CORE":
         print(f"\n{c}  😈 Powered by {menu}{RESET}\n")
-
