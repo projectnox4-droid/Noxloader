@@ -123,28 +123,29 @@ def main_menu():
         print(f"{c}  ┃ [4] 📘 {LIGHT_GRAY}NOXBOOK{c}                        ┃{RESET}")
         print(f"{c}  ┃ [5] ❌ {LIGHT_GRAY}NOXX{c}                           ┃{RESET}")
         print(f"{c}  ┃ [6] 🎬 {LIGHT_GRAY}NOXVID{c}                         ┃{RESET}")
-        print(f"{c}  ┃ [7] 🌐 {LIGHT_GRAY}Universal Hub{c}                  ┃{RESET}")
-        print(f"{c}  ┃ [8] 🔐 {LIGHT_GRAY}Akses Private (Auto Cookie){c}    ┃{RESET}")
-        print(f"{c}  ┃ [9] 🕵️ {LIGHT_GRAY}Intel Recon (Cek Meta){c}         ┃{RESET}")
+        print(f"{c}  ┃ [7] 🖼️ {LIGHT_GRAY}NOXIMG{c}                         ┃{RESET}")
+        print(f"{c}  ┃ [8] 🌐 {LIGHT_GRAY}Universal Hub{c}                  ┃{RESET}")
+        print(f"{c}  ┃ [9] 🔐 {LIGHT_GRAY}Akses Private (Auto Cookie){c}    ┃{RESET}")
+        print(f"{c}  ┃ [10] 🕵️ {LIGHT_GRAY}Intel Recon (Cek Meta){c}         ┃{RESET}")
         print(f"{c}  ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫{RESET}")
         print(f"{c}  ┃            😈 OP FEATURES 😈             ┃{RESET}")
         print(f"{c}  ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫{RESET}")
-        print(f"{c}  ┃ [10] 🔴 {LIGHT_GRAY}NOXSTREAM (Live Recorder){c}     ┃{RESET}")
-        print(f"{c}  ┃ [11] 🦇 {LIGHT_GRAY}Ngalong Mode (Jadwal Malam){c}   ┃{RESET}")
-        print(f"{c}  ┃ [12] 👻 {LIGHT_GRAY}Ghost Mode (Proxy Rotator){c}    ┃{RESET}")
-        print(f"{c}  ┃ [13] 🎧 {LIGHT_GRAY}NOXAUDIO (Music/Spotify){c}      ┃{RESET}")
-        print(f"{c}  ┃ [14] ✂️ {LIGHT_GRAY}Auto-Cutter Maker{c}            ┃{RESET}")
-        print(f"{c}  ┃ [15] 🔞 {LIGHT_GRAY}Premium Scraper (Drive/OF){c}    ┃{RESET}")
+        print(f"{c}  ┃ [11] 🔴 {LIGHT_GRAY}NOXSTREAM (Live Recorder){c}     ┃{RESET}")
+        print(f"{c}  ┃ [12] 🦇 {LIGHT_GRAY}Ngalong Mode (Jadwal Malam){c}   ┃{RESET}")
+        print(f"{c}  ┃ [13] 👻 {LIGHT_GRAY}Ghost Mode (Proxy Rotator){c}    ┃{RESET}")
+        print(f"{c}  ┃ [14] 🎧 {LIGHT_GRAY}NOXAUDIO (Music/Spotify){c}      ┃{RESET}")
+        print(f"{c}  ┃ [15] ✂️ {LIGHT_GRAY}Auto-Cutter Maker{c}            ┃{RESET}")
+        print(f"{c}  ┃ [16] 🔞 {LIGHT_GRAY}Premium Scraper (Drive/OF){c}    ┃{RESET}")
         print(f"{c}  ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫{RESET}")
         print(f"{c}  ┃           ⚙️ SYSTEM TOOLS ⚙️             ┃{RESET}")
         print(f"{c}  ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫{RESET}")
-        print(f"{c}  ┃ [16] 📦 {LIGHT_GRAY}Install Bahan{c}                 ┃{RESET}")
-        print(f"{c}  ┃ [17] 🔍 {LIGHT_GRAY}Cek Bahan{c}                     ┃{RESET}")
-        print(f"{c}  ┃ [18] 🔄 {LIGHT_GRAY}Update Engine{c}                 ┃{RESET}")
-        print(f"{c}  ┃ [19] 📜 {LIGHT_GRAY}Riwayat{c}                       ┃{RESET}")
-        print(f"{c}  ┃ [20] 🧹 {LIGHT_GRAY}Bersihkan Cache{c}               ┃{RESET}")
-        print(f"{c}  ┃ [21] 🕵️ {LIGHT_GRAY}Stalker Mode{c}                  ┃{RESET}")
-        print(f"{c}  ┃ [22] ⚙  {LIGHT_GRAY}Pengaturan{c}                    ┃{RESET}")
+        print(f"{c}  ┃ [17] 📦 {LIGHT_GRAY}Install Bahan{c}                 ┃{RESET}")
+        print(f"{c}  ┃ [18] 🔍 {LIGHT_GRAY}Cek Bahan{c}                     ┃{RESET}")
+        print(f"{c}  ┃ [19] 🔄 {LIGHT_GRAY}Update Engine{c}                 ┃{RESET}")
+        print(f"{c}  ┃ [20] 📜 {LIGHT_GRAY}Riwayat{c}                       ┃{RESET}")
+        print(f"{c}  ┃ [21] 🧹 {LIGHT_GRAY}Bersihkan Cache{c}               ┃{RESET}")
+        print(f"{c}  ┃ [22] 🕵️ {LIGHT_GRAY}Stalker Mode{c}                  ┃{RESET}")
+        print(f"{c}  ┃ [23] ⚙  {LIGHT_GRAY}Pengaturan{c}                    ┃{RESET}")
         print(f"{c}  ┃ {rgb(100,100,100)}[0]  🚪 Keluar{' '*22}{c} ┃{RESET}")
         print(f"{c}  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{RESET}")
         print()
@@ -171,6 +172,9 @@ def main_menu():
         elif pilih == '6':
             submenu("🎬 NOXVID", ["Video Format Biasa", "Video Kualitas Tinggi", "Batch URL"], "Vimeo", "NOXVID")
         elif pilih == '7':
+            from core.extra_menus import noximg_menu
+            noximg_menu()
+        elif pilih == '8':
             ThemeManager.current_menu = "UNIVERSAL"
             c = current_color()
             urls = get_urls_input()
@@ -184,7 +188,7 @@ def main_menu():
             print_footer()
             input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
             
-        elif pilih == '8':
+        elif pilih == '9':
             ThemeManager.current_menu = "CORE"
             clear()
             show_banner()
@@ -216,62 +220,62 @@ def main_menu():
                 print(f"  {LIGHT_GRAY}4. Balik sini, pencet Menu 8 lagi.{RESET}")
                 input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
                 
-        elif pilih == '9':
-            ThemeManager.current_menu = "CORE"
-            recon_url()
         elif pilih == '10':
             ThemeManager.current_menu = "CORE"
-            noxstream_menu()
+            recon_url()
         elif pilih == '11':
             ThemeManager.current_menu = "CORE"
-            ngalong_mode()
+            noxstream_menu()
         elif pilih == '12':
             ThemeManager.current_menu = "CORE"
-            ghost_mode()
+            ngalong_mode()
         elif pilih == '13':
             ThemeManager.current_menu = "CORE"
-            noxaudio_menu()
+            ghost_mode()
         elif pilih == '14':
             ThemeManager.current_menu = "CORE"
-            auto_cutter()
+            noxaudio_menu()
         elif pilih == '15':
             ThemeManager.current_menu = "CORE"
-            scraper_menu()
+            auto_cutter()
         elif pilih == '16':
+            ThemeManager.current_menu = "CORE"
+            scraper_menu()
+        elif pilih == '17':
             ThemeManager.current_menu = "CORE"
             clear()
             show_banner()
             install_deps()
             input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '17':
+        elif pilih == '18':
             ThemeManager.current_menu = "CORE"
             clear()
             show_banner()
             check_deps()
             input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '18':
+        elif pilih == '19':
             ThemeManager.current_menu = "CORE"
             clear()
             show_banner()
             update_engine()
             input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '19':
+        elif pilih == '20':
             ThemeManager.current_menu = "CORE"
             clear()
             show_banner()
             show_history()
             input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '20':
+        elif pilih == '21':
             ThemeManager.current_menu = "CORE"
             clear()
             show_banner()
             clean_cache()
             input(f"\n{c}  [Enter] Balik ke menu...{RESET}")
-        elif pilih == '21':
+        elif pilih == '22':
             ThemeManager.current_menu = "CORE"
             from core.extra_menus import stalker_mode
             stalker_mode()
-        elif pilih == '22':
+        elif pilih == '23':
             ThemeManager.current_menu = "CORE"
             show_settings()
         else:
